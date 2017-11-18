@@ -11,14 +11,28 @@
   <script>
     $(function(){
       $(".main-content-container").css('padding-top', 1.5*$("#topNavBar").height());
+      $(".readLess").css('display', 'none');
     });
-
   </script>
-  <style>
-  .main-content-container {
+
+  <script>
     
-  }
-  </style>
+    function readMore(classReadLess, classReadMore){
+      x = document.getElementsByClassName(classReadLess);
+      x[0].style.display = "inline";
+      x[1].style.display = "inline";
+      x = document.getElementsByClassName(classReadMore);
+      x[0].style.display = "none";
+    }
+    function readLess(classReadLess, classReadMore){
+      x = document.getElementsByClassName(classReadLess);
+      x[0].style.display = "none";
+      x[1].style.display = "none";
+      x = document.getElementsByClassName(classReadMore);
+      x[0].style.display = "inline";
+    }
+  </script>
+  
 </head>
 
 <body>    
@@ -63,9 +77,10 @@
       <!-- Content Pane Middle-->
       <div class="col-sm-8 col-sm-push-2">
 
-        <!-- 2 columns Panels pane -->
-
+        <!-- Row 1  -->
         <div class="row">
+
+          <!-- Amazon --> 
           <div class="col-sm-6">
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -73,18 +88,31 @@
               </div>
               <div class="panel-body" >
                 <ul class="nav nav-tabs">
-                  <li class="active"><a data-toggle="tab" href="#home">Can Do</a></li>
-                  <li><a data-toggle="tab" href="#menu1">Can't Do</a></li>
+                  <li class="active"><a data-toggle="tab" href="#amazonCan">Can Do</a></li>
+                  <li><a data-toggle="tab" href="#amazonCant">Can't Do</a></li>
                 </ul>
                 <div class="tab-content">
-                  <div id="home" class="tab-pane fade in active">
+                  <div id="amazonCan" class="tab-pane fade in active">
                     <h3>You Can:</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                      <small class="amazonCanReadMore"> 
+                        <button onclick="readMore('amazonCanReadLess', 'amazonCanReadMore')">...read more </button>
+                      </small>
+
+                      <span class=" readLess amazonCanReadLess">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        
+                        <small class=" readLess amazonCanReadLess">
+                          <button onclick="readLess('amazonCanReadLess', 'amazonCanReadMore')"> ...read less </button>
+                        </small>
+
+                      </span>
                     </p>
                   </div>
-                  <div id="menu1" class="tab-pane fade">
-                    <h3>Menu 1</h3>
+                  <div id="amazonCant" class="tab-pane fade">
+                    <h3>You Can't</h3>
                     <p>
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
@@ -93,6 +121,8 @@
               </div>
             </div>
           </div>
+
+          <!-- ClickBank -->          
           <div class="col-sm-6">
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -100,17 +130,17 @@
               </div>
               <div class="panel-body">
                 <ul class="nav nav-tabs">
-                  <li class="active"><a data-toggle="tab" href="#home">Can Do</a></li>
-                  <li><a data-toggle="tab" href="#menu1">Can't Do</a></li>
+                  <li class="active"><a data-toggle="tab" href="#cLickbankCan">Can Do</a></li>
+                  <li><a data-toggle="tab" href="#clickbankCant">Can't Do</a></li>
                 </ul>
                 <div class="tab-content">
-                  <div id="home" class="tab-pane fade in active">
+                  <div id="cLickbankCan" class="tab-pane fade in active">
                     <h3>You Can:</h3>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                   </div>
-                  <div id="menu1" class="tab-pane fade">
+                  <div id="cLickbankCant" class="tab-pane fade">
                     <h3>Menu 1</h3>
                     <p>
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -123,9 +153,10 @@
 
         </div>
 
-        <!-- 2 columns Panels pane -->
-
+        <!-- Row 2 -->
         <div class="row">
+
+          <!-- Walmart -->
           <div class="col-sm-6">
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -133,17 +164,17 @@
               </div>
               <div class="panel-body" >
                 <ul class="nav nav-tabs">
-                  <li class="active"><a data-toggle="tab" href="#home">Can Do</a></li>
-                  <li><a data-toggle="tab" href="#menu1">Can't Do</a></li>
+                  <li class="active"><a data-toggle="tab" href="#walmartCan">Can Do</a></li>
+                  <li><a data-toggle="tab" href="#walmartCant">Can't Do</a></li>
                 </ul>
                 <div class="tab-content">
-                  <div id="home" class="tab-pane fade in active">
+                  <div id="walmartCan" class="tab-pane fade in active">
                     <h3>You Can:</h3>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                   </div>
-                  <div id="menu1" class="tab-pane fade">
+                  <div id="cLickbankCant" class="tab-pane fade">
                     <h3>Menu 1</h3>
                     <p>
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -153,6 +184,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Apple -->
           <div class="col-sm-6">
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -160,17 +193,17 @@
               </div>
               <div class="panel-body">
                 <ul class="nav nav-tabs">
-                  <li class="active"><a data-toggle="tab" href="#home">Can Do</a></li>
-                  <li><a data-toggle="tab" href="#menu1">Can't Do</a></li>
+                  <li class="active"><a data-toggle="tab" href="#appleCan">Can Do</a></li>
+                  <li><a data-toggle="tab" href="#appleCant">Can't Do</a></li>
                 </ul>
                 <div class="tab-content">
-                  <div id="home" class="tab-pane fade in active">
+                  <div id="appleCan" class="tab-pane fade in active">
                     <h3>You Can:</h3>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                   </div>
-                  <div id="menu1" class="tab-pane fade">
+                  <div id="appleCant" class="tab-pane fade">
                     <h3>Menu 1</h3>
                     <p>
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
